@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Side Menu -->
+    <nav id="side-menu">
+        <h2>Weather App</h2>
+        <ul>
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="tables.html">Tables</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Dashboard Section -->
+    <section id="main-dashboard">
+        <header>
+            <input type="text" id="city-input" placeholder="Search City...">
+            <button id="fetch-weather">Get Weather</button>
+            <div id="user-profile">User Profile</div>
+        </header>
+
+        <!-- Weather Widget -->
+        <div id="weather-widget">
+            <h3>Weather Data Based on City</h3>
+            <div id="weather-info"></div>
+        </div>
+
+        <!-- Charts -->
+        <div id="charts">
+            <div id="bar-chart-container">
+                <h4>5-Day Temperature (Bar Chart)</h4>
+                <canvas id="bar-chart"></canvas>
+            </div>
+            <div id="doughnut-chart-container">
+                <h4>Weather Conditions (Doughnut Chart)</h4>
+                <canvas id="doughnut-chart"></canvas>
+            </div>
+            <div id="line-chart-container">
+                <h4>Temperature Change (Line Chart)</h4>
+                <canvas id="line-chart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

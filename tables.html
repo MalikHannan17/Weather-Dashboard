@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Tables</title>
+    <link rel="stylesheet" href="tablestyles.css">
+    <style>
+        /* Additional styles for buttons */
+        button {
+            background-color: #005c97; /* Button color */
+            color: white;               /* Text color */
+            border: none;               /* No border */
+            padding: 10px 15px;        /* Padding */
+            margin: 5px;               /* Spacing between buttons */
+            cursor: pointer;            /* Pointer cursor on hover */
+            border-radius: 5px;        /* Rounded corners */
+        }
+        button:disabled {
+            background-color: lightgray; /* Disabled button color */
+            cursor: not-allowed;         /* Not allowed cursor */
+        }
+        #pagination-controls {
+            margin-top: 10px; /* Space between the table and pagination controls */
+        }
+        #chat-response {
+            margin-top: 10px; /* Space for chat responses */
+            border: 1px solid #ddd; /* Border around chat response */
+            padding: 10px;    /* Padding inside response area */
+            background-color: #f9f9f9; /* Background color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Side Menu -->
+    <nav id="side-menu">
+        <h2>Weather App</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="tables.html" class="active">Tables</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Tables Section -->
+    <section id="main-tables">
+        <header>
+            <input type="text" id="input-city" placeholder="Search City...">
+            <button id="fetch-weather-table">Get Weather</button>
+            <div id="user-profile">User Profile</div>
+        </header>
+
+        <div id="tables-and-chat">
+            <!-- Weather Data Table -->
+            <div id="weather-table-section">
+                <h3>Weather Data Table</h3>
+                <table id="weather-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Condition</th>
+                            <th>Wind Speed (m/s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Weather data will be populated here via JavaScript -->
+                    </tbody>
+                </table>
+                <div id="pagination-controls">
+                    <button id="prev-page" disabled>Previous</button>
+                    <span id="page-info"></span>
+                    <button id="next-page">Next</button>
+                </div>
+                <div id="filter-controls">
+                    <button id="filter-rainy">Show Rainy Days</button>
+                    <button id="sort-asc">Sort Ascending</button>
+                    <button id="sort-desc">Sort Descending</button>
+                    <button id="highest-temp">Show Highest Temp</button>
+                </div>
+            </div>
+
+            <!-- Chatbot Section -->
+            <div id="chatbot-section">
+                <h3>Chatbot for Assistance</h3>
+                <div id="chat-bar">
+                    <input type="text" id="chat-input" placeholder="Ask a question...">
+                    <button id="send-chat">Send</button>
+                </div>
+                <div id="chat-response">Answer Area for Chatbot</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="tables.js"></script>
+</body>
+</html>
